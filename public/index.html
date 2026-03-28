@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corporate bana du?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1 class="title">Corporate bana du?</h1>
+  <div class="layout">
+
+    <!-- LEFT: INPUT -->
+    <div class="section input-section">
+      <textarea id="inputText" placeholder="Gussa likh... main corporate bana deta hoon"></textarea>
+    </div>
+
+    <!-- CENTER: BUTTONS -->
+    <div class="section controls">
+      <div class="tone-buttons">
+        <button onclick="setTone('polite', event)" class="active">Polite</button>
+        <button onclick="setTone('professional', event)">Professional</button>
+        <button onclick="setTone('assertive', event)">Assertive</button>
+      </div>
+
+      <button class="convert-btn" onclick="convertText()">Convert</button>
+    </div>
+
+    <!-- RIGHT: OUTPUT -->
+    <div class="section output-section">
+      <div class="output-box">
+        <button class="copy-btn" onclick="copyText()">📋</button>
+        <div id="output">Your polished message will appear here...</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

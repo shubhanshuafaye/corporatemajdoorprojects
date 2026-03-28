@@ -1,0 +1,203 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #f1f5f9);
+  color: #2d2d2d;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #1f2937;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* Sections */
+.section {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input Section */
+.input-section {
+  flex: 1;
+}
+
+textarea {
+  width: 80%;
+  max-width: 500px;
+  height: 70%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  resize: none;
+  font-size: 14px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.1);
+}
+
+/* Controls (CENTER) */
+.controls {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+/* Tone buttons */
+.tone-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tone-buttons button {
+  width: 160px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tone-buttons button:hover {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+/* Active tone */
+.tone-buttons button.active {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: white;
+  border-color: #4f46e5;
+}
+
+/* Convert button */
+.convert-btn {
+  width: 160px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.convert-btn:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+/* Output Section */
+.output-section {
+  flex: 1;
+}
+
+.output-box {
+  width: 80%;
+  max-width: 500px;
+  height: 70%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  position: relative;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Copy button */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: #f3f4f6;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.copy-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Output text */
+#output {
+  margin-top: 20px;
+  white-space: pre-wrap;
+  color: #9ca3af;
+}
+
+/* 📱 MOBILE (clean + compact) */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .title {
+    margin: 10px 0 15px;
+    font-size: 28px;
+  }
+
+  .layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .section {
+    padding: 12px;
+  }
+
+  textarea,
+  .output-box {
+    width: 100%;
+    height: 140px;
+  }
+
+  .controls {
+    width: 100%;
+    border: none;
+    gap: 12px;
+  }
+
+  .tone-buttons button,
+  .convert-btn {
+    width: 100%;
+  }
+
+  .convert-btn {
+    margin-top: 10px;
+  }
+}
